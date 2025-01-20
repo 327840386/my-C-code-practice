@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/luyuhao/Desktop/lab06-327840386/awesomell'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003BEC, symSize: 0x68 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _createNode, symObjAddr: 0x0, symBinAddr: 0x100003BEC, symSize: 0x68 }
+  - { offsetInCU: 0x77, offset: 0x77, size: 0x8, addend: 0x0, symName: _insertAtBeginning, symObjAddr: 0x68, symBinAddr: 0x100003C54, symSize: 0x3C }
+  - { offsetInCU: 0xBB, offset: 0xBB, size: 0x8, addend: 0x0, symName: _displayList, symObjAddr: 0xA4, symBinAddr: 0x100003C90, symSize: 0x78 }
+  - { offsetInCU: 0xED, offset: 0xED, size: 0x8, addend: 0x0, symName: _freeList, symObjAddr: 0x11C, symBinAddr: 0x100003D08, symSize: 0x54 }
+  - { offsetInCU: 0x11F, offset: 0x11F, size: 0x8, addend: 0x0, symName: _insertAtMiddle, symObjAddr: 0x170, symBinAddr: 0x100003D5C, symSize: 0x110 }
+  - { offsetInCU: 0x17F, offset: 0x17F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x280, symBinAddr: 0x100003E6C, symSize: 0xD8 }
+...

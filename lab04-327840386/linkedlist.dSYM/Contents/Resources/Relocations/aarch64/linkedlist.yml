@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/luyuhao/Desktop/lab04-327840386/linkedlist'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _create_list, symObjAddr: 0x0, symBinAddr: 0x100003C84, symSize: 0xDC }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _create_list, symObjAddr: 0x0, symBinAddr: 0x100003C84, symSize: 0xDC }
+  - { offsetInCU: 0x114, offset: 0x114, size: 0x8, addend: 0x0, symName: _print_list, symObjAddr: 0xDC, symBinAddr: 0x100003D60, symSize: 0x7C }
+  - { offsetInCU: 0x146, offset: 0x146, size: 0x8, addend: 0x0, symName: _free_list, symObjAddr: 0x158, symBinAddr: 0x100003DDC, symSize: 0x5C }
+  - { offsetInCU: 0x194, offset: 0x194, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1B4, symBinAddr: 0x100003E38, symSize: 0xAC }
+...

@@ -1,0 +1,1191 @@
+Note: breakpoints 1, 3 and 4 also set at pc 0x400855.
+Breakpoint 5 at 0x400855: file awesomell.c, line 93.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+95	    head = insertAtBeginning(head, 10); // List: 10
+
+Breakpoint 2, createNode (data=10) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+$15 = (Node_t *) 0x0
+Undefined command: "np".  Try "help".
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x0, data=10) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:96
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+
+Breakpoint 2, createNode (data=20) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022a0, data=20) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:97
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=30) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022c0, data=30) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:98
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=40) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022e0, data=40) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:99
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=50) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602300, data=50) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:100
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=60) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602320, data=60) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:101
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=70) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602340, data=70) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:102
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=80) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602360, data=80) at awesomell.c:25
+25	    newNode->next = head;
+Undefined command: "nn".  Try "help".
+26	    return newNode;
+27	}
+main () at awesomell.c:104
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 2, createNode (data=45) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+$16 = (Node_t *) 0x0
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+$17 = (Node_t *) 0x0
+19	    return newNode;
+$18 = (Node_t *) 0x0
+20	}
+$19 = (Node_t *) 0x0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:82
+82	    newNode->next = slow->next;
+$20 = (Node_t *) 0x0
+83	    slow->next = newNode;
+$21 = (Node_t *) 0x0
+Undefined command: "np".  Try "help".
+85	    return head;
+$22 = (Node_t *) 0x0
+86	}
+$23 = (Node_t *) 0x0
+main () at awesomell.c:106
+106	    printf("Linked List: ");
+$24 = (Node_t *) 0x0
+107	    displayList(head);
+$25 = (Node_t *) 0x0
+110	    freeList(head);
+$26 = (Node_t *) 0x0
+112	    return 0;
+$27 = (Node_t *) 0x0
+113	}
+$28 = (Node_t *) 0x0
+0x00007ffff7a43d85 in __libc_start_main () from /lib64/libc.so.6
+Single stepping until exit from function __libc_start_main,
+which has no line number information.
+[Inferior 1 (process 3374262) exited normally]
+Currently logging to "gdb.txt".
+Logs will be appended to the log file.
+Output will be logged and displayed.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+95	    head = insertAtBeginning(head, 10); // List: 10
+
+Breakpoint 2, createNode (data=10) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x0, data=10) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:96
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+
+Breakpoint 2, createNode (data=20) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022a0, data=20) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:97
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=30) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+Undefined command: "nn".  Try "help".
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022c0, data=30) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:98
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=40) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022e0, data=40) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:99
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=50) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+Undefined command: "nn".  Try "help".
+insertAtBeginning (head=0x602300, data=50) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:100
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=60) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+Undefined command: "nn".  Try "help".
+20	}
+insertAtBeginning (head=0x602320, data=60) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+Undefined command: "nn".  Try "help".
+27	}
+main () at awesomell.c:101
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=70) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602340, data=70) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:102
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=80) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602360, data=80) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:104
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 6, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+74	    Node_t* fast = head;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+Undefined command: "nn".  Try "help".
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+77	        fast = fast->next;
+Undefined command: "nn".  Try "help".
+75	    while (fast != NULL && fast->next != NULL) {
+81	    Node_t* newNode = createNode(data);
+
+Breakpoint 2, createNode (data=45) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+Undefined command: "nn".  Try "help".
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:82
+82	    newNode->next = slow->next;
+83	    slow->next = newNode;
+85	    return head;
+86	}
+main () at awesomell.c:106
+106	    printf("Linked List: ");
+107	    displayList(head);
+Undefined command: "nn".  Try "help".
+110	    freeList(head);
+Undefined command: "nn".  Try "help".
+112	    return 0;
+113	}
+0x00007ffff7a43d85 in __libc_start_main () from /lib64/libc.so.6
+Undefined command: "nn".  Try "help".
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+95	    head = insertAtBeginning(head, 10); // List: 10
+
+Breakpoint 2, createNode (data=10) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+Undefined command: "nn".  Try "help".
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x0, data=10) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:96
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+
+Breakpoint 2, createNode (data=20) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022a0, data=20) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:97
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=30) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022c0, data=30) at awesomell.c:25
+25	    newNode->next = head;
+Undefined command: "nn".  Try "help".
+26	    return newNode;
+27	}
+main () at awesomell.c:98
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=40) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+18	    newNode->next = NULL;
+19	    return newNode;
+Undefined command: "nn".  Try "help".
+20	}
+insertAtBeginning (head=0x6022e0, data=40) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:99
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+Undefined command: "nn".  Try "help".
+
+Breakpoint 2, createNode (data=50) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602300, data=50) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:100
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=60) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602320, data=60) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:101
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=70) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602340, data=70) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:102
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=80) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602360, data=80) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:104
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 6, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+$29 = (Node_t *) 0x0
+73	    Node_t* slow = head;
+74	    Node_t* fast = head;
+$30 = (Node_t *) 0x0
+$31 = (Node_t *) 0x0
+75	    while (fast != NULL && fast->next != NULL) {
+$32 = (Node_t *) 0x0
+76	        slow = slow->next;
+$33 = (Node_t *) 0x0
+77	        fast = fast->next;
+$34 = (Node_t *) 0x0
+75	    while (fast != NULL && fast->next != NULL) {
+$35 = (Node_t *) 0x0
+76	        slow = slow->next;
+$36 = (Node_t *) 0x0
+77	        fast = fast->next;
+$37 = (Node_t *) 0x0
+75	    while (fast != NULL && fast->next != NULL) {
+$38 = (Node_t *) 0x0
+76	        slow = slow->next;
+$39 = (Node_t *) 0x0
+77	        fast = fast->next;
+$40 = (Node_t *) 0x0
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+Undefined command: "nn".  Try "help".
+95	    head = insertAtBeginning(head, 10); // List: 10
+
+Breakpoint 2, createNode (data=10) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+Undefined command: "nn".  Try "help".
+insertAtBeginning (head=0x0, data=10) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:96
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+
+Breakpoint 2, createNode (data=20) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+Undefined command: "nn".  Try "help".
+20	}
+insertAtBeginning (head=0x6022a0, data=20) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:97
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=30) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022c0, data=30) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:98
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=40) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x6022e0, data=40) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:99
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=50) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602300, data=50) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:100
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=60) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602320, data=60) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:101
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=70) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602340, data=70) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:102
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+
+Breakpoint 2, createNode (data=80) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+19	    return newNode;
+20	}
+insertAtBeginning (head=0x602360, data=80) at awesomell.c:25
+25	    newNode->next = head;
+26	    return newNode;
+27	}
+main () at awesomell.c:104
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 6, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+$41 = (Node_t *) 0x602380
+74	    Node_t* fast = head;
+$42 = (Node_t *) 0x7ffff7dd6ad0 <_dl_fini>
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+$43 = (Node_t *) 0x602380
+77	        fast = fast->next;
+$44 = (Node_t *) 0x602380
+$45 = (Node_t *) 0x602380
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+$46 = (Node_t *) 0x602360
+77	        fast = fast->next;
+$47 = (Node_t *) 0x602360
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+No symbol "fasrt" in current context.
+$48 = (Node_t *) 0x602340
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+$49 = (Node_t *) 0x602300
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+75	    while (fast != NULL && fast->next != NULL) {
+76	        slow = slow->next;
+77	        fast = fast->next;
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+Undefined command: "nn".  Try "help".
+75	    while (fast != NULL && fast->next != NULL) {
+Undefined command: "nn".  Try "help".
+81	    Node_t* newNode = createNode(data);
+
+Breakpoint 2, createNode (data=45) at awesomell.c:12
+12	    Node_t* newNode = malloc(sizeof(Node_t));
+13	    if (newNode == NULL) {
+Undefined command: "nn".  Try "help".
+17	    newNode->data = data;
+18	    newNode->next = NULL;
+19	    return newNode;
+20	}
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:82
+82	    newNode->next = slow->next;
+83	    slow->next = newNode;
+Undefined command: "nn".  Try "help".
+85	    return head;
+86	}
+main () at awesomell.c:106
+106	    printf("Linked List: ");
+107	    displayList(head);
+110	    freeList(head);
+112	    return 0;
+Undefined command: "nn".  Try "help".
+113	}
+0x00007ffff7a43d85 in __libc_start_main () from /lib64/libc.so.6
+Single stepping until exit from function __libc_start_main,
+which has no line number information.
+[Inferior 1 (process 3376237) exited normally]
+No symbol table is loaded.  Use the "file" command.
+Breakpoint 1 (main) pending.
+No symbol table is loaded.  Use the "file" command.
+Please answer y or [n].
+Breakpoint 2 (main) pending.
+Reading symbols from awesomell...done.
+Note: breakpoints 1 and 2 also set at pc 0x400855.
+Breakpoint 3 at 0x400855: file awesomell.c, line 93.
+The program is not being run.
+Breakpoint 4 at 0x4007b8: file awesomell.c, line 68.
+Currently logging to "gdb.txt".
+Logs will be appended to the log file.
+Output will be logged and displayed.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+Missing separate debuginfos, use: yum debuginfo-install glibc-2.28-225.el8.x86_64
+95	    head = insertAtBeginning(head, 10); // List: 10
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 4, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+$1 = (Node_t *) 0x602380
+74	    Node_t* fast = head;
+Single stepping until exit from function __libc_start_main,
+which has no line number information.
+[Inferior 1 (process 3383481) exited normally]
+No symbol "slow" in current context.
+The program is not being run.
+The program is not being run.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+95	    head = insertAtBeginning(head, 10); // List: 10
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 4, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+$2 = (Node_t *) 0x602380
+74	    Node_t* fast = head;
+$3 = (Node_t *) 0x602380
+$4 = (Node_t *) 0x7ffff7dd6ad0 <_dl_fini>
+75	    while (fast != NULL && fast->next != NULL) {
+$5 = (Node_t *) 0x602380
+76	        slow = slow->next;
+$6 = (Node_t *) 0x602380
+$7 = (Node_t *) 0x602380
+77	        fast = fast->next->next;
+$8 = (Node_t *) 0x602360
+$9 = (Node_t *) 0x602380
+75	    while (fast != NULL && fast->next != NULL) {
+$10 = (Node_t *) 0x602360
+$11 = (Node_t *) 0x602360
+76	        slow = slow->next;
+$12 = (Node_t *) 0x602360
+$13 = (Node_t *) 0x602360
+77	        fast = fast->next->next;
+$14 = (Node_t *) 0x602340
+$15 = (Node_t *) 0x602360
+75	    while (fast != NULL && fast->next != NULL) {
+$16 = (Node_t *) 0x602340
+$17 = (Node_t *) 0x602340
+76	        slow = slow->next;
+$18 = (Node_t *) 0x602340
+$19 = (Node_t *) 0x602340
+77	        fast = fast->next->next;
+$20 = (Node_t *) 0x602320
+$21 = (Node_t *) 0x602340
+75	    while (fast != NULL && fast->next != NULL) {
+$22 = (Node_t *) 0x602320
+$23 = (Node_t *) 0x602320
+76	        slow = slow->next;
+$24 = (Node_t *) 0x602320
+$25 = (Node_t *) 0x602320
+77	        fast = fast->next->next;
+$26 = (Node_t *) 0x602300
+$27 = (Node_t *) 0x602320
+75	    while (fast != NULL && fast->next != NULL) {
+$28 = (Node_t *) 0x602300
+$29 = (Node_t *) 0x602300
+76	        slow = slow->next;
+$30 = (Node_t *) 0x602300
+$31 = (Node_t *) 0x602300
+Breakpoint 5 at 0x4007f1: file awesomell.c, line 76.
+$32 = (Node_t *) 0x602300
+$33 = (Node_t *) 0x602300
+77	        fast = fast->next->next;
+$34 = (Node_t *) 0x6022e0
+$35 = (Node_t *) 0x602300
+75	    while (fast != NULL && fast->next != NULL) {
+$36 = (Node_t *) 0x6022e0
+$37 = (Node_t *) 0x6022e0
+
+Breakpoint 5, insertAtMiddle (head=0x602380, data=45) at awesomell.c:76
+76	        slow = slow->next;
+$38 = (Node_t *) 0x6022e0
+$39 = (Node_t *) 0x6022e0
+77	        fast = fast->next->next;
+$40 = (Node_t *) 0x6022c0
+$41 = (Node_t *) 0x6022e0
+75	    while (fast != NULL && fast->next != NULL) {
+$42 = (Node_t *) 0x6022c0
+$43 = (Node_t *) 0x6022c0
+
+Breakpoint 5, insertAtMiddle (head=0x602380, data=45) at awesomell.c:76
+76	        slow = slow->next;
+$44 = (Node_t *) 0x6022c0
+$45 = (Node_t *) 0x6022c0
+77	        fast = fast->next->next;
+$46 = (Node_t *) 0x6022a0
+$47 = (Node_t *) 0x6022c0
+75	    while (fast != NULL && fast->next != NULL) {
+$48 = (Node_t *) 0x6022a0
+$49 = (Node_t *) 0x6022a0
+81	    Node_t* newNode = createNode(data);
+No symbol "newnode" in current context.
+82	    newNode->next = slow->next;
+83	    slow->next = newNode;
+85	    return head;
+86	}
+main () at awesomell.c:106
+106	        // to one position ahead of their current position
+107	    printf("Linked List: ");
+110	    // Free the memory used by the list
+Please answer y or n.
+Reading symbols from awesomell...done.
+Undefined command: "exit".  Try "help".
+Please answer y or n.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+Missing separate debuginfos, use: yum debuginfo-install glibc-2.28-225.el8.x86_64
+95	    head = insertAtBeginning(head, 10); // List: 10
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 2, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+$1 = (Node_t *) 0x602380
+74	    Node_t* fast = head->next;
+$2 = (Node_t *) 0x602380
+$3 = (Node_t *) 0x7ffff7dd6ad0 <_dl_fini>
+75	    while (fast != NULL && fast->next != NULL) {
+$4 = (Node_t *) 0x602380
+76	        slow = slow->next;
+$5 = (Node_t *) 0x602380
+$6 = (Node_t *) 0x602380
+77	        fast = fast->next->next;
+$7 = (Node_t *) 0x602360
+75	    while (fast != NULL && fast->next != NULL) {
+$8 = (Node_t *) 0x602360
+76	        slow = slow->next;
+$9 = (Node_t *) 0x602360
+$10 = (Node_t *) 0x602360
+77	        fast = fast->next->next;
+$11 = (Node_t *) 0x602340
+75	    while (fast != NULL && fast->next != NULL) {
+$12 = (Node_t *) 0x602340
+76	        slow = slow->next;
+77	        fast = fast->next->next;
+$13 = (Node_t *) 0x602320
+75	    while (fast != NULL && fast->next != NULL) {
+$14 = (Node_t *) 0x602320
+76	        slow = slow->next;
+77	        fast = fast->next->next;
+$15 = (Node_t *) 0x602300
+75	    while (fast != NULL && fast->next != NULL) {
+$16 = (Node_t *) 0x602300
+76	        slow = slow->next;
+$17 = (Node_t *) 0x602300
+77	        fast = fast->next->next;
+$18 = (Node_t *) 0x6022e0
+75	    while (fast != NULL && fast->next != NULL) {
+$19 = (Node_t *) 0x6022e0
+76	        slow = slow->next;
+77	        fast = fast->next->next;
+$20 = (Node_t *) 0x6022c0
+Breakpoint 3 at 0x4007fd: file awesomell.c, line 77.
+75	    while (fast != NULL && fast->next != NULL) {
+$21 = (Node_t *) 0x6022c0
+76	        slow = slow->next;
+
+Breakpoint 3, insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+$22 = (Node_t *) 0x6022c0
+Note: breakpoint 3 also set at pc 0x4007fd.
+Breakpoint 4 at 0x4007fd: file awesomell.c, line 77.
+75	    while (fast != NULL && fast->next != NULL) {
+$23 = (Node_t *) 0x6022a0
+81	    Node_t* newNode = createNode(data);
+82	    newNode->next = slow->next;
+83	    slow->next = newNode;
+85	    return head;
+86	}
+main () at awesomell.c:106
+106	        // to one position ahead of their current position
+107	    printf("Linked List: ");
+110	    // Free the memory used by the list
+112	
+113	    return 0;
+0x00007ffff7a43d85 in __libc_start_main () from /lib64/libc.so.6
+No symbol table is loaded.  Use the "file" command.
+Reading symbols from awesomell...done.
+Breakpoint 1 at 0x400855: file awesomell.c, line 93.
+Breakpoint 2 at 0x4007b8: file awesomell.c, line 68.
+Starting program: /home/yuhaolu/lab06-327840386/awesomell 
+
+Breakpoint 1, main () at awesomell.c:93
+93	    Node_t* head = NULL; // Initialize list as empty
+Missing separate debuginfos, use: yum debuginfo-install glibc-2.28-225.el8.x86_64
+95	    head = insertAtBeginning(head, 10); // List: 10
+96	    head = insertAtBeginning(head, 20); // List: 20 -> 10
+97	    head = insertAtBeginning(head, 30); // List: 30 -> 20 -> 10
+98	    head = insertAtBeginning(head, 40); // List: 40 -> 30 -> 20 -> 10
+99	    head = insertAtBeginning(head, 50); // List: 50 -> 40 -> 30 -> 20 -> 10
+100	    head = insertAtBeginning(head, 60); // List: 60 -> 50 -> 40 -> 30 -> 20 -> 10
+101	    head = insertAtBeginning(head, 70); // List: 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+102	    head = insertAtBeginning(head, 80); // List: 80 -> 70 -> 60 -> 50 -> 40 -> 30 -> 20 -> 10
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+
+Breakpoint 2, insertAtMiddle (head=0x602380, data=45) at awesomell.c:68
+68	    if (head == NULL || head->next == NULL) {
+73	    Node_t* slow = head;
+74	    Node_t* fast = head->next;
+$1 = (Node_t *) 0x602380
+75	    while (fast != NULL && fast->next != NULL) {
+$2 = (Node_t *) 0x602380
+76	        slow = slow->next;
+77	        fast = fast->next->next;
+$3 = (Node_t *) 0x602360
+$4 = (Node_t *) 0x602380
+75	    while (fast != NULL && fast->next != NULL) {
+$5 = (Node_t *) 0x602360
+$6 = (Node_t *) 0x602360
+76	        slow = slow->next;
+$7 = (Node_t *) 0x602360
+$8 = (Node_t *) 0x602360
+77	        fast = fast->next->next;
+$9 = (Node_t *) 0x602340
+$10 = (Node_t *) 0x602360
+Hardware watchpoint 3: fast
+Hardware watchpoint 4: slow
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x602360
+New value = (Node_t *) 0x602340
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+Hardware watchpoint 5: fast
+Hardware watchpoint 6: fast
+1: fast = (Node_t *) 0x602340
+2: slow = (Node_t *) 0x602340
+76	        slow = slow->next;
+1: fast = (Node_t *) 0x602340
+2: slow = (Node_t *) 0x602340
+
+Hardware watchpoint 4: slow
+
+Old value = (Node_t *) 0x602340
+New value = (Node_t *) 0x602320
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+1: fast = (Node_t *) 0x602340
+2: slow = (Node_t *) 0x602320
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x602340
+New value = (Node_t *) 0x602320
+
+Hardware watchpoint 5: fast
+
+Old value = (Node_t *) 0x602340
+New value = (Node_t *) 0x602320
+
+Hardware watchpoint 6: fast
+
+Old value = (Node_t *) 0x602340
+New value = (Node_t *) 0x602320
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+1: fast = (Node_t *) 0x602320
+2: slow = (Node_t *) 0x602320
+76	        slow = slow->next;
+1: fast = (Node_t *) 0x602320
+2: slow = (Node_t *) 0x602320
+
+Hardware watchpoint 4: slow
+
+Old value = (Node_t *) 0x602320
+New value = (Node_t *) 0x602300
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+1: fast = (Node_t *) 0x602320
+2: slow = (Node_t *) 0x602300
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x602320
+New value = (Node_t *) 0x602300
+
+Hardware watchpoint 5: fast
+
+Old value = (Node_t *) 0x602320
+New value = (Node_t *) 0x602300
+
+Hardware watchpoint 6: fast
+
+Old value = (Node_t *) 0x602320
+New value = (Node_t *) 0x602300
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+1: fast = (Node_t *) 0x602300
+2: slow = (Node_t *) 0x602300
+76	        slow = slow->next;
+1: fast = (Node_t *) 0x602300
+2: slow = (Node_t *) 0x602300
+
+Hardware watchpoint 4: slow
+
+Old value = (Node_t *) 0x602300
+New value = (Node_t *) 0x6022e0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+1: fast = (Node_t *) 0x602300
+2: slow = (Node_t *) 0x6022e0
+Hardware watchpoint 7: slow
+Hardware watchpoint 8: fast
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x602300
+New value = (Node_t *) 0x6022e0
+
+Hardware watchpoint 5: fast
+
+Old value = (Node_t *) 0x602300
+New value = (Node_t *) 0x6022e0
+
+Hardware watchpoint 6: fast
+
+Old value = (Node_t *) 0x602300
+New value = (Node_t *) 0x6022e0
+
+Hardware watchpoint 8: fast
+
+Old value = (Node_t *) 0x602300
+New value = (Node_t *) 0x6022e0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+1: fast = (Node_t *) 0x6022e0
+2: slow = (Node_t *) 0x6022e0
+76	        slow = slow->next;
+1: fast = (Node_t *) 0x6022e0
+2: slow = (Node_t *) 0x6022e0
+
+Hardware watchpoint 4: slow
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+
+Hardware watchpoint 7: slow
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+1: fast = (Node_t *) 0x6022e0
+2: slow = (Node_t *) 0x6022c0
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+
+Hardware watchpoint 5: fast
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+
+Hardware watchpoint 6: fast
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+
+Hardware watchpoint 8: fast
+
+Old value = (Node_t *) 0x6022e0
+New value = (Node_t *) 0x6022c0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+1: fast = (Node_t *) 0x6022c0
+2: slow = (Node_t *) 0x6022c0
+76	        slow = slow->next;
+1: fast = (Node_t *) 0x6022c0
+2: slow = (Node_t *) 0x6022c0
+
+Hardware watchpoint 4: slow
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+
+Hardware watchpoint 7: slow
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:77
+77	        fast = fast->next->next;
+1: fast = (Node_t *) 0x6022c0
+2: slow = (Node_t *) 0x6022a0
+
+Hardware watchpoint 3: fast
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+
+Hardware watchpoint 5: fast
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+
+Hardware watchpoint 6: fast
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+
+Hardware watchpoint 8: fast
+
+Old value = (Node_t *) 0x6022c0
+New value = (Node_t *) 0x6022a0
+insertAtMiddle (head=0x602380, data=45) at awesomell.c:75
+75	    while (fast != NULL && fast->next != NULL) {
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+81	    Node_t* newNode = createNode(data);
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+82	    newNode->next = slow->next;
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+83	    slow->next = newNode;
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+85	    return head;
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+86	}
+1: fast = (Node_t *) 0x6022a0
+2: slow = (Node_t *) 0x6022a0
+
+Watchpoint 3 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 4 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 5 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 6 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 7 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 8 deleted because the program has left the block in
+which its expression is valid.
+0x0000000000400916 in main () at awesomell.c:104
+104	    head = insertAtMiddle(head, 45); // should be inserted between 50 and 40 (in the middle of the list)
+106	        // to one position ahead of their current position
+107	    printf("Linked List: ");
+110	    // Free the memory used by the list
+112	
+113	    return 0;
+0x00007ffff7a43d85 in __libc_start_main () from /lib64/libc.so.6
+Single stepping until exit from function __libc_start_main,
+which has no line number information.
+[Inferior 1 (process 3396135) exited normally]
